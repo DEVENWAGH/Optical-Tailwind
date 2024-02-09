@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OPTICAL-LENS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <style>
+    #scroll {
+      height: 22rem;
+      width: 100%;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      display: flex;
+    }
+
+    .scroll-contain {
+      width: auto;
+      height: 100%;
+      flex-shrink: 0;
+      animation-name: anime;
+      animation-duration: 7s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    .dtext {
+      flex: 0 0 auto;
+      display: inline-block;
+    }
+
+    .dtext h1 {
+      font-size: 18vh;
+      padding: 0 10vw;
+      padding-top: 4vh;
+    }
+
+    @keyframes anime {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    #scroll-img {
+      border-top: 10px solid rgb(255, 0, 0);
+      height: calc(100% - 30rem);
+      width: 100%;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      display: flex;
+      background-color: #000;
+    }
+
+    .scrolling-img-contain {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-shrink: 0;
+      animation-name: animate;
+      animation: animate 5s linear infinite;
+    }
+
+    .img-wrap {
+      object-fit: cover;
+      padding: 0 2vw;
+    }
+
+    @keyframes animate {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    @media (max-width:640px) {
+      #scroll {
+        height: 17rem;
+      }
+
+      #scroll-img {
+        border-top: 5px solid rgb(0, 0, 0);
+        border-bottom: 5px solid rgb(0, 0, 0);
+        height: calc(100% - 22rem);
+        background-color: #000000;
+      }
+
+      .img-wrap {
+        padding: 0 0;
+      }
+
+      .imgs {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  </style>
+
+  <main id="main" class="h-screen w-full">
+    <nav class="flex justify-between h-20 w-full">
+      <div class="circle flex px-10 h-20 items-center justify-between">
+        <div class="rounded-full h-5 w-5 bg-black mr-0.5"></div>
+        <div class="rounded-full h-5 w-5 bg-black"></div>
+      </div>
+      <div class="menu flex text-xl items-center justify-between">
+        <div class="country">
+          <a class="gap-5" href="#">IN <span class="text-gray-500">RU</span></a>
+        </div>
+        <div class="hidden menu lg:flex lg:items-center lg:justify-between lg:px-10 lg:h-20 lg:w-ful lg:gap-10">
+          <a class="text-xl font-medium" href="#">country</a>
+          <a class="text-xl font-medium" href="#">profile</a>
+          <a class="text-xl font-medium" href="#">watchlist[0]</a>
+          <a class="text-xl font-medium" href="#">search</a>
+        </div>
+        <i class="ri-menu-2-line lg:hidden px-5"></i>
+    </nav>
+    <nav>
+      <div class="hidden lg:flex lg:gap-28 lg:px-10 lg:h-12">
+        <a class="text-xs link lg:text-xl font-medium" href="#">SUN</a>
+        <a class="text-xs link lg:text-xl font-medium" href="#">OPTICAL</a>
+        <a class="text-xs link lg:text-xl font-medium" href="#">COLLECTIONS</a>
+        <a class="text-xs link lg:text-xl font-medium" href="#">STUDIO</a>
+        <a class="text-xs link lg:text-xl font-medium" href="#">ABOUT</a>
+        <a class="text-xs link lg:text-xl font-medium" href="#">SHOPS</a>
+        <a class="text-xs link lg:text-xl font-medium" href="#">JOURNAL</a>
+      </div>
+    </nav>
+    <div id="scroll">
+      <div class="scroll-contain">
+        <div class="dtext">
+          <h1>Blender</h1>
+        </div>
+        <div class="dtext">
+          <h1>Trendline</h1>
+        </div>
+        <div class="dtext">
+          <h1>Lens</h1>
+        </div>
+      </div>
+      <div class="scroll-contain">
+        <div class="dtext">
+          <h1>Blender</h1>
+        </div>
+        <div class="dtext">
+          <h1>Trendline</h1>
+        </div>
+        <div class="dtext">
+          <h1>Lens</h1>
+        </div>
+      </div>
+    </div>
+
+    <div id="scroll-img">
+      <div class="scrolling-img-contain">
+        <div class="img-wrap">
+          <img class="imgs" src="./st.img" alt="Glass" />
+        </div>
+        <div class="img-wrap">
+          <img class="imgs" src="./nd.img" alt="Glass" />
+        </div>
+        <div class="img-wrap">
+          <img class="imgs" src="./rd.img" alt="Glass" />
+        </div>
+      </div>
+      <div class="scrolling-img-contain">
+        <div class="img-wrap">
+          <img class="imgs" src="./st.img" alt="Glass" />
+        </div>
+        <div class="img-wrap">
+          <img class="imgs" src="./nd.img" alt="Glass" />
+        </div>
+        <div class="img-wrap">
+          <img class="imgs" src="./rd.img" alt="Glass" />
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
