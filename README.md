@@ -1,3 +1,3 @@
 # Tailwind
- host link-https://devenwagh.github.io/OpticalTailwind/
+ host link- https://devenwagh.github.io/Optical-Tailwind/
  Build with HTML5/Tailwind-css
